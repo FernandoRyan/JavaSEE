@@ -29,17 +29,17 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        lblPizza = new javax.swing.JLabel();
+        lblPizzaName = new javax.swing.JLabel();
+        lblPizzaPrice = new javax.swing.JLabel();
+        lblLKR = new javax.swing.JLabel();
+        lblQTY = new javax.swing.JLabel();
+        spQtyPizza = new javax.swing.JSpinner();
+        lblTotal = new javax.swing.JLabel();
+        lblTotalLKR = new javax.swing.JLabel();
+        btnAddToPlatePizza = new javax.swing.JButton();
+        lblPizzaTotalPrice = new javax.swing.JLabel();
+        lblCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -51,97 +51,99 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 400, 530);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PIZA.jpg"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(70, 40, 250, 170);
-        jLabel2.getAccessibleContext().setAccessibleName("lblPizza");
+        lblPizza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPizza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PIZA.jpg"))); // NOI18N
+        jPanel1.add(lblPizza);
+        lblPizza.setBounds(70, 40, 250, 170);
+        lblPizza.getAccessibleContext().setAccessibleName("lblPizza");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("PIZZA");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(150, 220, 120, 30);
-        jLabel3.getAccessibleContext().setAccessibleName("lblPizzaName");
+        lblPizzaName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblPizzaName.setForeground(new java.awt.Color(0, 0, 0));
+        lblPizzaName.setText("PIZZA");
+        jPanel1.add(lblPizzaName);
+        lblPizzaName.setBounds(150, 220, 120, 30);
+        lblPizzaName.getAccessibleContext().setAccessibleName("lblPizzaName");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("150.00");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(180, 260, 50, 20);
-        jLabel5.getAccessibleContext().setAccessibleName("lblPizzaPrice");
+        lblPizzaPrice.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblPizzaPrice.setForeground(new java.awt.Color(51, 51, 51));
+        lblPizzaPrice.setText("150.00");
+        jPanel1.add(lblPizzaPrice);
+        lblPizzaPrice.setBounds(180, 260, 50, 20);
+        lblPizzaPrice.getAccessibleContext().setAccessibleName("lblPizzaPrice");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("LKR");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(140, 260, 40, 20);
-        jLabel4.getAccessibleContext().setAccessibleName("lblLKR");
+        lblLKR.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblLKR.setForeground(new java.awt.Color(51, 51, 51));
+        lblLKR.setText("LKR");
+        lblLKR.setInheritsPopupMenu(false);
+        jPanel1.add(lblLKR);
+        lblLKR.setBounds(140, 260, 40, 20);
+        lblLKR.getAccessibleContext().setAccessibleName("lblLKR");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("QTY");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(60, 330, 50, 30);
-        jLabel6.getAccessibleContext().setAccessibleName("lblQTY");
+        lblQTY.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblQTY.setForeground(new java.awt.Color(0, 0, 0));
+        lblQTY.setText("QTY");
+        jPanel1.add(lblQTY);
+        lblQTY.setBounds(60, 330, 50, 30);
+        lblQTY.getAccessibleContext().setAccessibleName("lblQTY");
 
-        jSpinner1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jSpinner1.setBorder(null);
-        jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jSpinner1);
-        jSpinner1.setBounds(110, 320, 50, 50);
-        jSpinner1.getAccessibleContext().setAccessibleName("spQtyPizza");
+        spQtyPizza.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        spQtyPizza.setBorder(null);
+        spQtyPizza.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(spQtyPizza);
+        spQtyPizza.setBounds(110, 320, 50, 50);
+        spQtyPizza.getAccessibleContext().setAccessibleName("spQtyPizza");
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("TOTAL :");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(200, 330, 60, 30);
+        lblTotal.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblTotal.setForeground(new java.awt.Color(102, 102, 102));
+        lblTotal.setText("TOTAL :");
+        jPanel1.add(lblTotal);
+        lblTotal.setBounds(200, 330, 60, 30);
+        lblTotal.getAccessibleContext().setAccessibleName("lblTotal");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("LKR");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(280, 330, 40, 30);
-        jLabel7.getAccessibleContext().setAccessibleName("lblLKR");
+        lblTotalLKR.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblTotalLKR.setForeground(new java.awt.Color(51, 51, 51));
+        lblTotalLKR.setText("LKR");
+        jPanel1.add(lblTotalLKR);
+        lblTotalLKR.setBounds(280, 330, 40, 30);
+        lblTotalLKR.getAccessibleContext().setAccessibleName("lblTotalLKR");
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 0));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD TO PLATE");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton1);
-        jButton1.setBounds(100, 410, 210, 60);
-        jButton1.getAccessibleContext().setAccessibleName("btnAddToPlatePizza");
+        btnAddToPlatePizza.setBackground(new java.awt.Color(0, 153, 0));
+        btnAddToPlatePizza.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnAddToPlatePizza.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddToPlatePizza.setText("ADD TO PLATE");
+        btnAddToPlatePizza.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAddToPlatePizza.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnAddToPlatePizza);
+        btnAddToPlatePizza.setBounds(100, 410, 210, 60);
+        btnAddToPlatePizza.getAccessibleContext().setAccessibleName("btnAddToPlatePizza");
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel8.setText("150.00");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(320, 330, 50, 30);
-        jLabel8.getAccessibleContext().setAccessibleName("lblPizzaTotalPrice");
+        lblPizzaTotalPrice.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblPizzaTotalPrice.setForeground(new java.awt.Color(51, 51, 51));
+        lblPizzaTotalPrice.setText("150.00");
+        jPanel1.add(lblPizzaTotalPrice);
+        lblPizzaTotalPrice.setBounds(320, 330, 50, 30);
+        lblPizzaTotalPrice.getAccessibleContext().setAccessibleName("lblPizzaTotalPrice");
 
-        jButton2.setBackground(new java.awt.Color(255, 0, 0));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("X");
-        jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setPreferredSize(new java.awt.Dimension(181, 36));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblCancel.setBackground(new java.awt.Color(255, 0, 0));
+        lblCancel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        lblCancel.setForeground(new java.awt.Color(255, 255, 255));
+        lblCancel.setText("X");
+        lblCancel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        lblCancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblCancel.setPreferredSize(new java.awt.Dimension(181, 36));
+        lblCancel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                lblCancelMouseClicked(evt);
             }
         });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        lblCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                lblCancelActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(370, 10, 20, 20);
-        jButton2.getAccessibleContext().setAccessibleName("lblCancel");
+        jPanel1.add(lblCancel);
+        lblCancel.setBounds(370, 10, 20, 20);
+        lblCancel.getAccessibleContext().setAccessibleName("lblCancel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,13 +162,13 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void lblCancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCancelMouseClicked
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_lblCancelMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void lblCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblCancelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_lblCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,18 +206,18 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnAddToPlatePizza;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JButton lblCancel;
+    private javax.swing.JLabel lblLKR;
+    private javax.swing.JLabel lblPizza;
+    private javax.swing.JLabel lblPizzaName;
+    private javax.swing.JLabel lblPizzaPrice;
+    private javax.swing.JLabel lblPizzaTotalPrice;
+    private javax.swing.JLabel lblQTY;
+    private javax.swing.JLabel lblTotal;
+    private javax.swing.JLabel lblTotalLKR;
+    private javax.swing.JSpinner spQtyPizza;
     // End of variables declaration//GEN-END:variables
 }

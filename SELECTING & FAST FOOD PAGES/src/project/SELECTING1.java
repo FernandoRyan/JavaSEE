@@ -28,8 +28,8 @@ public class SELECTING1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnDineIn = new javax.swing.JButton();
+        btnTakeAway = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,34 +37,34 @@ public class SELECTING1 extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1367, 714));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 153));
-        jButton1.setFont(new java.awt.Font("Algerian", 1, 50)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(51, 0, 0));
-        jButton1.setText("DINE IN");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnDineIn.setBackground(new java.awt.Color(255, 204, 153));
+        btnDineIn.setFont(new java.awt.Font("Algerian", 1, 50)); // NOI18N
+        btnDineIn.setForeground(new java.awt.Color(51, 0, 0));
+        btnDineIn.setText("DINE IN");
+        btnDineIn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDineIn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnDineIn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnDineInActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 250, 490, 110));
-        jButton1.getAccessibleContext().setAccessibleName("btnDineIn");
+        jPanel1.add(btnDineIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 250, 490, 110));
+        btnDineIn.getAccessibleContext().setAccessibleName("btnDineIn");
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 153));
-        jButton2.setFont(new java.awt.Font("Algerian", 1, 50)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(51, 0, 0));
-        jButton2.setText("TAKE AWAY");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setPreferredSize(new java.awt.Dimension(149, 58));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnTakeAway.setBackground(new java.awt.Color(255, 204, 153));
+        btnTakeAway.setFont(new java.awt.Font("Algerian", 1, 50)); // NOI18N
+        btnTakeAway.setForeground(new java.awt.Color(51, 0, 0));
+        btnTakeAway.setText("TAKE AWAY");
+        btnTakeAway.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnTakeAway.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTakeAway.setPreferredSize(new java.awt.Dimension(149, 58));
+        btnTakeAway.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnTakeAwayActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 490, 110));
-        jButton2.getAccessibleContext().setAccessibleName("btnTakeAway");
+        jPanel1.add(btnTakeAway, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 490, 110));
+        btnTakeAway.getAccessibleContext().setAccessibleName("btnTakeAway");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/filename (11) - Copy.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 700));
@@ -87,13 +87,13 @@ public class SELECTING1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnDineInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDineInActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnDineInActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnTakeAwayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTakeAwayActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnTakeAwayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,8 +132,8 @@ public class SELECTING1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnDineIn;
+    private javax.swing.JButton btnTakeAway;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

@@ -29,17 +29,17 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        lblSubmarine = new javax.swing.JLabel();
+        lblSubmarineName = new javax.swing.JLabel();
+        lblSubmarinePrice = new javax.swing.JLabel();
+        lblLKR = new javax.swing.JLabel();
+        lblQty = new javax.swing.JLabel();
+        spSubmarineQty = new javax.swing.JSpinner();
+        lblTOTAL = new javax.swing.JLabel();
+        lblTotalLKR = new javax.swing.JLabel();
+        btnAddToPlateSubmarine = new javax.swing.JButton();
+        lblSubmarineTotalPrice = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -51,92 +51,93 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 400, 530);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SUBMARINE.jpg"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(80, 40, 250, 170);
-        jLabel2.getAccessibleContext().setAccessibleName("lblSubmarine");
+        lblSubmarine.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSubmarine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SUBMARINE.jpg"))); // NOI18N
+        jPanel1.add(lblSubmarine);
+        lblSubmarine.setBounds(80, 40, 250, 170);
+        lblSubmarine.getAccessibleContext().setAccessibleName("lblSubmarine");
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("SUBMARINE");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(120, 220, 150, 30);
-        jLabel3.getAccessibleContext().setAccessibleName("lblSubmarineName");
+        lblSubmarineName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblSubmarineName.setForeground(new java.awt.Color(0, 0, 0));
+        lblSubmarineName.setText("SUBMARINE");
+        jPanel1.add(lblSubmarineName);
+        lblSubmarineName.setBounds(120, 220, 150, 30);
+        lblSubmarineName.getAccessibleContext().setAccessibleName("lblSubmarineName");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("200.00");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(160, 260, 50, 20);
-        jLabel5.getAccessibleContext().setAccessibleName("lblSubmarinePrice");
+        lblSubmarinePrice.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblSubmarinePrice.setForeground(new java.awt.Color(51, 51, 51));
+        lblSubmarinePrice.setText("200.00");
+        jPanel1.add(lblSubmarinePrice);
+        lblSubmarinePrice.setBounds(160, 260, 50, 20);
+        lblSubmarinePrice.getAccessibleContext().setAccessibleName("lblSubmarinePrice");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("LKR");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(120, 260, 40, 20);
+        lblLKR.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblLKR.setForeground(new java.awt.Color(51, 51, 51));
+        lblLKR.setText("LKR");
+        jPanel1.add(lblLKR);
+        lblLKR.setBounds(120, 260, 40, 20);
+        lblLKR.getAccessibleContext().setAccessibleName("lblLKR");
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("QTY");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(50, 340, 50, 30);
-        jLabel6.getAccessibleContext().setAccessibleName("lblQty");
+        lblQty.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblQty.setForeground(new java.awt.Color(0, 0, 0));
+        lblQty.setText("QTY");
+        jPanel1.add(lblQty);
+        lblQty.setBounds(50, 340, 50, 30);
+        lblQty.getAccessibleContext().setAccessibleName("lblQty");
 
-        jSpinner1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jSpinner1.setBorder(null);
-        jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jSpinner1);
-        jSpinner1.setBounds(100, 330, 50, 50);
-        jSpinner1.getAccessibleContext().setAccessibleName("spSubmarineQty");
+        spSubmarineQty.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        spSubmarineQty.setBorder(null);
+        spSubmarineQty.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(spSubmarineQty);
+        spSubmarineQty.setBounds(100, 330, 50, 50);
+        spSubmarineQty.getAccessibleContext().setAccessibleName("spSubmarineQty");
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("TOTAL :");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(190, 340, 60, 30);
-        jLabel9.getAccessibleContext().setAccessibleName("lblTOTAL");
+        lblTOTAL.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblTOTAL.setForeground(new java.awt.Color(102, 102, 102));
+        lblTOTAL.setText("TOTAL :");
+        jPanel1.add(lblTOTAL);
+        lblTOTAL.setBounds(190, 340, 60, 30);
+        lblTOTAL.getAccessibleContext().setAccessibleName("lblTOTAL");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("LKR");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(270, 340, 40, 30);
-        jLabel7.getAccessibleContext().setAccessibleName("lblLKR");
+        lblTotalLKR.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblTotalLKR.setForeground(new java.awt.Color(51, 51, 51));
+        lblTotalLKR.setText("LKR");
+        jPanel1.add(lblTotalLKR);
+        lblTotalLKR.setBounds(270, 340, 40, 30);
+        lblTotalLKR.getAccessibleContext().setAccessibleName("lblTotalLKR");
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 0));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD TO PLATE");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(jButton1);
-        jButton1.setBounds(90, 420, 210, 60);
-        jButton1.getAccessibleContext().setAccessibleName("btnAddTo PlateSubmarine");
+        btnAddToPlateSubmarine.setBackground(new java.awt.Color(0, 153, 0));
+        btnAddToPlateSubmarine.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnAddToPlateSubmarine.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddToPlateSubmarine.setText("ADD TO PLATE");
+        btnAddToPlateSubmarine.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAddToPlateSubmarine.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnAddToPlateSubmarine);
+        btnAddToPlateSubmarine.setBounds(90, 420, 210, 60);
+        btnAddToPlateSubmarine.getAccessibleContext().setAccessibleName("btnAddToPlateSubmarine");
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel8.setText("200.00");
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(310, 340, 50, 30);
-        jLabel8.getAccessibleContext().setAccessibleName("lblSubmarineTotalPrice");
+        lblSubmarineTotalPrice.setFont(new java.awt.Font("Arial", 1, 15)); // NOI18N
+        lblSubmarineTotalPrice.setForeground(new java.awt.Color(51, 51, 51));
+        lblSubmarineTotalPrice.setText("200.00");
+        jPanel1.add(lblSubmarineTotalPrice);
+        lblSubmarineTotalPrice.setBounds(310, 340, 50, 30);
+        lblSubmarineTotalPrice.getAccessibleContext().setAccessibleName("lblSubmarineTotalPrice");
 
-        jButton2.setBackground(new java.awt.Color(255, 0, 0));
-        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("X");
-        jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setPreferredSize(new java.awt.Dimension(181, 36));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCancel.setBackground(new java.awt.Color(255, 0, 0));
+        btnCancel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancel.setText("X");
+        btnCancel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        btnCancel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancel.setPreferredSize(new java.awt.Dimension(181, 36));
+        btnCancel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                btnCancelMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2);
-        jButton2.setBounds(370, 10, 20, 20);
-        jButton2.getAccessibleContext().setAccessibleName("lblCancel");
+        jPanel1.add(btnCancel);
+        btnCancel.setBounds(370, 10, 20, 20);
+        btnCancel.getAccessibleContext().setAccessibleName("btnCancel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,9 +156,9 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void btnCancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelMouseClicked
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_btnCancelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -196,18 +197,18 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnAddToPlateSubmarine;
+    private javax.swing.JButton btnCancel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JLabel lblLKR;
+    private javax.swing.JLabel lblQty;
+    private javax.swing.JLabel lblSubmarine;
+    private javax.swing.JLabel lblSubmarineName;
+    private javax.swing.JLabel lblSubmarinePrice;
+    private javax.swing.JLabel lblSubmarineTotalPrice;
+    private javax.swing.JLabel lblTOTAL;
+    private javax.swing.JLabel lblTotalLKR;
+    private javax.swing.JSpinner spSubmarineQty;
     // End of variables declaration//GEN-END:variables
 }

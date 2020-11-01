@@ -15,6 +15,7 @@ public class start extends javax.swing.JFrame {
      */
     public start() {
         initComponents();
+        this.setExtendedState(start.MAXIMIZED_BOTH);
     }
 
     /**
@@ -26,32 +27,17 @@ public class start extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Desktop\\facebook_profile_image.png")); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(890, 260, 1270, 780);
-
-        jPanel1.setBackground(new java.awt.Color(0, 186, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1367, 710));
-        jPanel1.setLayout(null);
-
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        jLabel3.setText("& enjoy your Meal ..");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(560, 400, 470, 150);
-
         jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\loogoo.jpg")); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 170, 354, 400);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(110, 20, 354, 400);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -62,11 +48,17 @@ public class start extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(470, 330, 310, 100);
+        getContentPane().add(jButton1);
+        jButton1.setBounds(340, 100, 280, 90);
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1367, 710);
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel3.setText("& enjoy your Meal ..");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(250, 180, 470, 150);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/top-view-circular-frame-with-delicious-food_23-2148308812.jpg"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, -100, 1220, 650);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -112,9 +104,8 @@ public class start extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

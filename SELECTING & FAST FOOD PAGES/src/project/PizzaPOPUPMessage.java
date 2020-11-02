@@ -5,6 +5,8 @@
  */
 package project;
 
+import java.awt.Color;
+
 /**
  *
  * @author Neranji Sulakshika
@@ -28,7 +30,6 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblPizza = new javax.swing.JLabel();
         lblPizzaName = new javax.swing.JLabel();
         lblPizzaPrice = new javax.swing.JLabel();
@@ -48,8 +49,6 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 530));
         jPanel1.setLayout(null);
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 400, 530);
 
         lblPizza.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPizza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/PIZA.jpg"))); // NOI18N
@@ -113,6 +112,14 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
         btnAddToPlatePizza.setText("ADD TO PLATE");
         btnAddToPlatePizza.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddToPlatePizza.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddToPlatePizza.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddToPlatePizzaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddToPlatePizzaMouseExited(evt);
+            }
+        });
         jPanel1.add(btnAddToPlatePizza);
         btnAddToPlatePizza.setBounds(100, 410, 210, 60);
         btnAddToPlatePizza.getAccessibleContext().setAccessibleName("btnAddToPlatePizza");
@@ -170,6 +177,14 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_lblCancelActionPerformed
 
+    private void btnAddToPlatePizzaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlatePizzaMouseEntered
+        btnAddToPlatePizza.setBackground(Color.RED);
+    }//GEN-LAST:event_btnAddToPlatePizzaMouseEntered
+
+    private void btnAddToPlatePizzaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlatePizzaMouseExited
+        btnAddToPlatePizza.setBackground(Color.GREEN);
+    }//GEN-LAST:event_btnAddToPlatePizzaMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -207,7 +222,6 @@ public class PizzaPOPUPMessage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddToPlatePizza;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton lblCancel;
     private javax.swing.JLabel lblLKR;

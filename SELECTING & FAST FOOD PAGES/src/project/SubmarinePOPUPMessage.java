@@ -5,6 +5,8 @@
  */
 package project;
 
+import java.awt.Color;
+
 /**
  *
  * @author Neranji Sulakshika
@@ -28,7 +30,6 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblSubmarine = new javax.swing.JLabel();
         lblSubmarineName = new javax.swing.JLabel();
         lblSubmarinePrice = new javax.swing.JLabel();
@@ -48,8 +49,6 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 530));
         jPanel1.setLayout(null);
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 400, 530);
 
         lblSubmarine.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSubmarine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SUBMARINE.jpg"))); // NOI18N
@@ -112,6 +111,14 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
         btnAddToPlateSubmarine.setText("ADD TO PLATE");
         btnAddToPlateSubmarine.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddToPlateSubmarine.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddToPlateSubmarine.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddToPlateSubmarineMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddToPlateSubmarineMouseExited(evt);
+            }
+        });
         jPanel1.add(btnAddToPlateSubmarine);
         btnAddToPlateSubmarine.setBounds(90, 420, 210, 60);
         btnAddToPlateSubmarine.getAccessibleContext().setAccessibleName("btnAddToPlateSubmarine");
@@ -160,6 +167,14 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnCancelMouseClicked
 
+    private void btnAddToPlateSubmarineMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateSubmarineMouseEntered
+        btnAddToPlateSubmarine.setBackground(Color.RED);
+    }//GEN-LAST:event_btnAddToPlateSubmarineMouseEntered
+
+    private void btnAddToPlateSubmarineMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateSubmarineMouseExited
+        btnAddToPlateSubmarine.setBackground(Color.GREEN);
+    }//GEN-LAST:event_btnAddToPlateSubmarineMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -199,7 +214,6 @@ public class SubmarinePOPUPMessage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddToPlateSubmarine;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblLKR;
     private javax.swing.JLabel lblQty;

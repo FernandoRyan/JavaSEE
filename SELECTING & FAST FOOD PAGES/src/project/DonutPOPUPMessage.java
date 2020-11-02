@@ -5,6 +5,8 @@
  */
 package project;
 
+import java.awt.Color;
+
 /**
  *
  * @author Neranji Sulakshika
@@ -28,7 +30,6 @@ public class DonutPOPUPMessage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblDonut = new javax.swing.JLabel();
         lblDonutName = new javax.swing.JLabel();
         lblDonutPrice = new javax.swing.JLabel();
@@ -48,8 +49,6 @@ public class DonutPOPUPMessage extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 530));
         jPanel1.setLayout(null);
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(-140, 0, 540, 530);
 
         lblDonut.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDonut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/DONUT.jpg"))); // NOI18N
@@ -112,6 +111,14 @@ public class DonutPOPUPMessage extends javax.swing.JFrame {
         btnAddToPlateDonut.setText("ADD TO PLATE");
         btnAddToPlateDonut.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddToPlateDonut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddToPlateDonut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddToPlateDonutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddToPlateDonutMouseExited(evt);
+            }
+        });
         jPanel1.add(btnAddToPlateDonut);
         btnAddToPlateDonut.setBounds(100, 410, 210, 60);
         btnAddToPlateDonut.getAccessibleContext().setAccessibleName("btnAddToPlateDonut");
@@ -169,6 +176,14 @@ public class DonutPOPUPMessage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void btnAddToPlateDonutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateDonutMouseEntered
+        btnAddToPlateDonut.setBackground(Color.RED);
+    }//GEN-LAST:event_btnAddToPlateDonutMouseEntered
+
+    private void btnAddToPlateDonutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateDonutMouseExited
+        btnAddToPlateDonut.setBackground(Color.GREEN);
+    }//GEN-LAST:event_btnAddToPlateDonutMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -207,7 +222,6 @@ public class DonutPOPUPMessage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddToPlateDonut;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDonut;
     private javax.swing.JLabel lblDonutName;

@@ -5,6 +5,8 @@
  */
 package project;
 
+import java.awt.Color;
+
 /**
  *
  * @author Neranji Sulakshika
@@ -28,7 +30,6 @@ public class HotDogPOPUPMessage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblHotDog = new javax.swing.JLabel();
         lblHotDogName = new javax.swing.JLabel();
         lblHotDogPrice = new javax.swing.JLabel();
@@ -48,8 +49,6 @@ public class HotDogPOPUPMessage extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 530));
         jPanel1.setLayout(null);
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 400, 530);
 
         lblHotDog.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHotDog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/HOTDOG.jpg"))); // NOI18N
@@ -112,6 +111,14 @@ public class HotDogPOPUPMessage extends javax.swing.JFrame {
         btnAddToPlateHotDog.setText("ADD TO PLATE");
         btnAddToPlateHotDog.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddToPlateHotDog.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddToPlateHotDog.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddToPlateHotDogMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddToPlateHotDogMouseExited(evt);
+            }
+        });
         jPanel1.add(btnAddToPlateHotDog);
         btnAddToPlateHotDog.setBounds(100, 410, 210, 60);
         btnAddToPlateHotDog.getAccessibleContext().setAccessibleName("btnAddToPlateHotDog");
@@ -169,6 +176,14 @@ public class HotDogPOPUPMessage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void btnAddToPlateHotDogMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateHotDogMouseEntered
+        btnAddToPlateHotDog.setBackground(Color.RED);
+    }//GEN-LAST:event_btnAddToPlateHotDogMouseEntered
+
+    private void btnAddToPlateHotDogMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateHotDogMouseExited
+        btnAddToPlateHotDog.setBackground(Color.GREEN);
+    }//GEN-LAST:event_btnAddToPlateHotDogMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -207,7 +222,6 @@ public class HotDogPOPUPMessage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddToPlateHotDog;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHotDog;
     private javax.swing.JLabel lblHotDogName;

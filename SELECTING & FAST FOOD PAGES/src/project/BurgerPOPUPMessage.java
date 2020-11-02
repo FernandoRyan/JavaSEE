@@ -31,7 +31,6 @@ public class BurgerPOPUPMessage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblBurger = new javax.swing.JLabel();
         lblBurgerName = new javax.swing.JLabel();
         lblLKR = new javax.swing.JLabel();
@@ -52,10 +51,6 @@ public class BurgerPOPUPMessage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setLayout(null);
-
-        jLabel1.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 400, 500);
 
         lblBurger.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblBurger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BURGER.jpg"))); // NOI18N
@@ -125,6 +120,14 @@ public class BurgerPOPUPMessage extends javax.swing.JFrame {
         btnAddToPlateBurger.setText("ADD TO PLATE");
         btnAddToPlateBurger.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddToPlateBurger.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddToPlateBurger.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddToPlateBurgerMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddToPlateBurgerMouseExited(evt);
+            }
+        });
         jPanel1.add(btnAddToPlateBurger);
         btnAddToPlateBurger.setBounds(90, 410, 210, 60);
         btnAddToPlateBurger.getAccessibleContext().setAccessibleName("btnAddToPlateBurger");
@@ -155,6 +158,14 @@ public class BurgerPOPUPMessage extends javax.swing.JFrame {
     private void btnCANCELMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCANCELMouseClicked
         this.setVisible(false);
     }//GEN-LAST:event_btnCANCELMouseClicked
+
+    private void btnAddToPlateBurgerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateBurgerMouseEntered
+        btnAddToPlateBurger.setBackground(Color.RED);
+    }//GEN-LAST:event_btnAddToPlateBurgerMouseEntered
+
+    private void btnAddToPlateBurgerMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateBurgerMouseExited
+        btnAddToPlateBurger.setBackground(Color.GREEN);
+    }//GEN-LAST:event_btnAddToPlateBurgerMouseExited
 
     /**
      * @param args the command line arguments
@@ -194,7 +205,6 @@ public class BurgerPOPUPMessage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddToPlateBurger;
     private javax.swing.JButton btnCANCEL;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblBurger;
     private javax.swing.JLabel lblBurgerName;

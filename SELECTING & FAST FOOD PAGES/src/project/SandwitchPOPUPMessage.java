@@ -5,6 +5,8 @@
  */
 package project;
 
+import java.awt.Color;
+
 /**
  *
  * @author Neranji Sulakshika
@@ -28,7 +30,6 @@ public class SandwitchPOPUPMessage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         lblSandwitch = new javax.swing.JLabel();
         lblSandwitchName = new javax.swing.JLabel();
         lblSandwitchPrice = new javax.swing.JLabel();
@@ -48,8 +49,6 @@ public class SandwitchPOPUPMessage extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 530));
         jPanel1.setLayout(null);
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 400, 530);
 
         lblSandwitch.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSandwitch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/SANDWITCH.jpg"))); // NOI18N
@@ -112,6 +111,14 @@ public class SandwitchPOPUPMessage extends javax.swing.JFrame {
         btnAddToPlateSandwitch.setText("ADD TO PLATE");
         btnAddToPlateSandwitch.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddToPlateSandwitch.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddToPlateSandwitch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAddToPlateSandwitchMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAddToPlateSandwitchMouseExited(evt);
+            }
+        });
         jPanel1.add(btnAddToPlateSandwitch);
         btnAddToPlateSandwitch.setBounds(100, 410, 210, 60);
         btnAddToPlateSandwitch.getAccessibleContext().setAccessibleName("btnAddToPlateSandwitch");
@@ -169,6 +176,14 @@ public class SandwitchPOPUPMessage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void btnAddToPlateSandwitchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateSandwitchMouseEntered
+        btnAddToPlateSandwitch.setBackground(Color.RED);
+    }//GEN-LAST:event_btnAddToPlateSandwitchMouseEntered
+
+    private void btnAddToPlateSandwitchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddToPlateSandwitchMouseExited
+        btnAddToPlateSandwitch.setBackground(Color.GREEN);
+    }//GEN-LAST:event_btnAddToPlateSandwitchMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -207,7 +222,6 @@ public class SandwitchPOPUPMessage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddToPlateSandwitch;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblLKR;
     private javax.swing.JLabel lblQTY;
